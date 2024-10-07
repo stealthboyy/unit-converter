@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="inputSection">
+            <h1>Unit Converter</h1>
+            <nav>
+                <a href="length.html" >Length</a>
+                <a href="weight.html" class="active">Weight</a>
+                <a href="temperature.html">Temperature</a>
+            </nav>
+            <label for="weightValue"> Enter the weight to convert: </label>
+            <input type="number" id="weightValue" placeholder="Enter a value...">
+
+            <label for="weightFrom"> Unit to convert from: </label>
+            <select id="weightFrom">
+                <option value="g">Gram</option>
+                <option value="kg">Kilogram</option>
+                <option value="lb">Pounds</option>
+                <option value="N">Newton</option>
+                <option value="t">Tonne</option>
+            </select>
+
+            
+            <label for="weightTo">Unit to Convert to:</label>
+            <select id="weightTo">
+                <option value="g">Gram</option>
+                <option value="kg">Kilogram</option>
+                <option value="lb">Pounds</option>
+                <option value="N">Newton</option>
+                <option value="t">Tonne</option>
+            </select>
+
+            <button onclick="convertWeight()"> Convert </button>
+        </div>
+
+        <!-- Result section -->
+        <div id="resultSection" class="section" style="display: none;">
+            <h1>Unit Converter</h1>
+            <nav>
+                <a href="length.html">Length</a>
+                <a href="weight.html"  class="active">Weight</a>
+                <a href="temperature.html">Temperature</a>
+            </nav>
+
+            <p id="conversionResult">Result of your calculation: </p>
+            <button onclick="resetWeightPage()">Reset</button>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
